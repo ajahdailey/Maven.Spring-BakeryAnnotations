@@ -60,8 +60,8 @@ public class BakerControllerTest {
                 .content(expectedContent)
                 .accept(MediaType.APPLICATION_JSON)
                 .contentType(MediaType.APPLICATION_JSON)
-            )
-                .andExpect(MockMvcResultMatchers.status().isOk())
+        )
+                .andExpect(MockMvcResultMatchers.status().isCreated())
                 .andExpect(MockMvcResultMatchers.content().string(expectedContent));
     }
 }
